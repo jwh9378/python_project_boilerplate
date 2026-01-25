@@ -1,0 +1,80 @@
+{
+  // -----------------------------
+  // Python 기본
+  // -----------------------------
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.useLibraryCodeForTypes": true,
+
+  // -----------------------------
+  // Pylance (타입 & import 자동완성 핵심)
+  // -----------------------------
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "error",
+    "reportUnusedImport": "warning"
+  },
+
+  // -----------------------------
+  // Ruff (lint + format)
+  // -----------------------------
+  "python.formatting.provider": "none",
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "editor.formatOnSave": true,
+
+  "ruff.enable": true,
+  "ruff.lint.run": "onSave",
+  "ruff.format.run": "onSave",
+
+  // -----------------------------
+  // mypy
+  // -----------------------------
+  "mypy.enabled": true,
+  "mypy.runUsingActiveInterpreter": true,
+  "mypy.targets": [
+    "src"
+  ],
+
+  // -----------------------------
+  // Error Lens
+  // -----------------------------
+  "errorLens.enabled": true,
+  "errorLens.fontWeight": "bold",
+  "errorLens.delay": 0,
+  "errorLens.excludeBySource": [
+    "mypy"
+  ],
+
+  // -----------------------------
+  // Import 자동 추가 & 수정
+  // -----------------------------
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+
+  // -----------------------------
+  // Command Runner
+  // -----------------------------
+  "command-runner.commands": {
+    "pytest all": "pytest -q",
+    "pytest current": "pytest ${file}",
+    "ruff check": "ruff check .",
+    "mypy": "mypy src"
+  },
+
+  // -----------------------------
+  // 테스트 UX 개선
+  // -----------------------------
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+
+  // -----------------------------
+  // 탐색기 설정 (폴더 축약 방지)
+  // -----------------------------
+  "explorer.compactFolders": false
+}
