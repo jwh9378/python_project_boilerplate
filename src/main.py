@@ -3,6 +3,10 @@ import logging
 import GlobalConfigs  # noqa: F401
 
 
+def hello_world() -> str:
+    return "Hello, World!"
+
+
 def main() -> None:
     """Entry point for the hypermodern Python application."""
     logging.debug("""

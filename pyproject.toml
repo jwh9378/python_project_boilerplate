@@ -9,7 +9,7 @@ homepage = "https://github.com/cjolowicz/hypermodern-python"
 repository = "https://github.com/cjolowicz/hypermodern-python"
 documentation = "https://hypermodern-python.readthedocs.io"
 keywords = ["hypermodern"]
-package-mode = false
+packages = [{include = "src/**"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -28,6 +28,10 @@ safety = "^2.3.5"
 [tool.poetry.scripts]
 hypermodern-python = "hypermodern_python.console:main"
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
 
@@ -45,6 +49,9 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
 
 [tool.mypy]
 ignore_missing_imports = true
