@@ -3,16 +3,11 @@ name: PR checker (CI)
 on:
   pull_request:
     branches: [ main ]
+    types: [review_requested]
   workflow_dispatch:
-  issue_comment:
-    types: [created]
 
 jobs:
   lint-and-test:
-    if: |
-      github.event.issue.pull_request && 
-      github.event.comment.body == 'trigger'
-
     runs-on: ubuntu-latest
 
     steps:
