@@ -9,6 +9,7 @@ homepage = "https://github.com/cjolowicz/hypermodern-python"
 repository = "https://github.com/cjolowicz/hypermodern-python"
 documentation = "https://hypermodern-python.readthedocs.io"
 keywords = ["hypermodern"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
