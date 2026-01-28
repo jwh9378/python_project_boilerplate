@@ -34,7 +34,7 @@ jobs:
       - name: Run Mypy
         run: |
           source .venv/bin/activate
-          mypy .
+          mypy src
 
       - name: Run Pytest
         run: |
