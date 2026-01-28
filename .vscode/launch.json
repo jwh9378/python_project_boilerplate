@@ -10,7 +10,8 @@
       "env": {
         "LOG_LEVEL": "INFO",
         "LOG_TIME": "false"
-      }
+      },
+      "justMyCode": false
     },
     {
       "name": "Pytest: Current Test File",

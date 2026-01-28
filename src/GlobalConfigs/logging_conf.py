@@ -12,7 +12,7 @@ class CustomFormatter(logging.Formatter):
     bold_red = "\x1b[31;1m"
     reset = "\x1b[0m"
 
-    def __init__(self, include_time=True):
+    def __init__(self, include_time: bool = True) -> None:
         super().__init__()
         self.include_time = include_time
         fmt = "%(levelname)-8s | %(message)s"
@@ -27,7 +27,12 @@ class CustomFormatter(logging.Formatter):
             logging.CRITICAL: self.bold_red + fmt + self.reset,
         }
 
-    def format(self, record):
+    def format(self, record: logging.LogRecord) -> str:
+        """Format the log record with colors and indentation.
+
+        Args:
+            record: The log record to format.
+        """
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         formatted = formatter.format(record)

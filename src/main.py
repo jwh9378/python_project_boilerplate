@@ -2,7 +2,9 @@ import logging
 
 import GlobalConfigs  # noqa: F401
 
-if __name__ == "__main__":
+
+def main() -> None:
+    """Entry point for the hypermodern Python application."""
     logging.debug("""
                   Debugging information.
                   Useful for diagnosing problems.
@@ -11,3 +13,7 @@ if __name__ == "__main__":
     logging.warning("This is a warning message.")
     logging.error("An error has occurred.")
     logging.critical("Critical issue encountered.")
+
+
+if __name__ == "__main__":
+    main()

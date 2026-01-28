@@ -9,42 +9,10 @@
   "python.analysis.useLibraryCodeForTypes": true,
 
   // -----------------------------
-  // Pylance (타입 & import 자동완성 핵심)
-  // -----------------------------
-  "python.analysis.diagnosticSeverityOverrides": {
-    "reportMissingImports": "error",
-    "reportUnusedImport": "warning"
-  },
-
-  // -----------------------------
   // Ruff (lint + format)
   // -----------------------------
-  "python.formatting.provider": "none",
   "editor.defaultFormatter": "charliermarsh.ruff",
   "editor.formatOnSave": true,
-
-  "ruff.enable": true,
-  "ruff.lint.run": "onSave",
-  "ruff.format.run": "onSave",
-
-  // -----------------------------
-  // mypy
-  // -----------------------------
-  "mypy.enabled": true,
-  "mypy.runUsingActiveInterpreter": true,
-  "mypy.targets": [
-    "src"
-  ],
-
-  // -----------------------------
-  // Error Lens
-  // -----------------------------
-  "errorLens.enabled": true,
-  "errorLens.fontWeight": "bold",
-  "errorLens.delay": 0,
-  "errorLens.excludeBySource": [
-    "mypy"
-  ],
 
   // -----------------------------
   // Import 자동 추가 & 수정
@@ -59,7 +27,6 @@
   // -----------------------------
   "command-runner.commands": {
     "pytest all": "pytest -q",
-    "pytest current": "pytest ${file}",
     "ruff check": "ruff check .",
     "mypy": "mypy src"
   },
