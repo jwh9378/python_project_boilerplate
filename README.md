@@ -6,7 +6,8 @@
 # hypermodern-python
 
 Companion repository for the Hypermodern Python article series<br>
-https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769
+<https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769>
 
 :eyes: Looking for a reusable project template? Check out the *Hypermodern Python Cookiecutter*:<br>
-https://github.com/cjolowicz/cookiecutter-hypermodern-python
+<https://github.com/cjolowicz/cookiecutter-hypermodern-python>
+sss
